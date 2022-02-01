@@ -17,7 +17,8 @@ namespace ProcessStatistics
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 cmdParser = new ProcessStatsArgsParser(CollectStatisticsWindows);
-            } else
+            }
+            else
             {
                 cmdParser = new ProcessStatsArgsParser(CollectStatisticsWindows);
             }
@@ -33,13 +34,14 @@ namespace ProcessStatistics
                     process.ProcessName);
 
                 string folderName = "Statistics" + DateTime.Now.ToString("-dd-MM-yyyy");
-                System.IO.Directory.CreateDirectory(folderName);
+                Directory.CreateDirectory(folderName);
                 string outputFilePath = folderName + "\\" + output;
                 try
                 {
                     // empty output text file
                     File.WriteAllText(outputFilePath, String.Empty);
-                } catch (Exception e)
+                }
+                catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
                     return;
