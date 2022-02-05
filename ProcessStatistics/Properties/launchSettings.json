@@ -2,7 +2,7 @@
   "profiles": {
     "ProcessStatistics": {
       "commandName": "Project",
-      "commandLineArgs": "--input NotePad.exe --interval 2000 --output outputfile.txt"
+      "commandLineArgs": "--input NotePad.exe --interval 2000"
     }
   }
 }

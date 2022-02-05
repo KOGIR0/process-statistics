@@ -19,6 +19,7 @@ namespace ProcessStatistics.CommandLine
               aliases: new string[] { "--input", "-i" }
               , description: "The path to executable file.");
             inputExeFileOption.IsRequired = true;
+
             Option intervalOption = new Option<int>(
               aliases: new string[] { "--interval" }
               , description: "The interval in milliseconds."
